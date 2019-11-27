@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApp</title>
+    <link rel="stylesheet" type="text/css" href="diamond-grid.css">
+    <link rel="stylesheet" type="text/css" href="diamonds.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="diamond-grid">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="jquery.diamonds.js"></script>
+    <script type="text/javascript">
+        $(".diamond-grid").diamonds({
+            size: 220, // Size of diamonds in pixels. Both width and height. 
+            gap: 5, // Pixels between each square.
+            hideIncompleteRow: false, // Hide last row if there are not enough items to fill it completely.
+            autoRedraw: true, // Auto redraw diamonds when it detects resizing.
+            itemSelector: ".item" // the css selector to use to select diamonds-items.
+        });
+    </script>
+</body>
+
+</html>
