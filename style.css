@@ -6,6 +6,9 @@ html {
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 .bg-image {
   background-image: url("main-bg-img.jpg");
   filter: blur(11px);
@@ -30,10 +33,43 @@ html {
   left: 0;
   right: 0;
 }
+nav .nav-item {
+  position: absolute;
+  z-index: 1;
+  top: 1em;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
+}
+nav .nav-item.log-in {
+  right: 2em;
+}
+nav .nav-item.sign-up {
+  right: 6em;
+}
+.vive {
+  background-image: url("Index_deluxe_kit.png");
+  width: 21rem;
+  height: 22rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.circle {
+  height: 24em;
+  width: 24em;
+  background-color: #bbb;
+  border-radius: 50%;
+  text-align: center;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .page-wrap {
     margin: 4em 0.5em;
+  }
+  nav .nav-item { 
+    top: .5em;
   }
 }
 
