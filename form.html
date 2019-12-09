@@ -22,7 +22,7 @@
             <div id="signup">   
             <h1>Sign Up for Free</h1>
             
-            <form action="/" method="post">
+            <form>
     
             <div class="field-wrap">
                 <label>
@@ -38,7 +38,7 @@
                 <input type="password"required autocomplete="off"/>
             </div>
             
-            <button type="submit" class="button button-block"/>Get Started</button>
+            <button class="button button-block">Get Started</button>
             
             </form>
     
@@ -47,32 +47,34 @@
             <div id="login">   
             <h1>Welcome Back!</h1>
             
-            <form action="/" method="post">
+            <form>
             
                 <div class="field-wrap">
                 <label>
                 Email Address<span class="req">*</span>
                 </label>
-                <input type="email"required autocomplete="off"/>
+                <input id="login-email" type="email"required autocomplete="off"/>
             </div>
             
             <div class="field-wrap">
                 <label>
                 Password<span class="req">*</span>
                 </label>
-                <input type="password"required autocomplete="off"/>
+                <input id="login-password" type="password"required autocomplete="off"/>
             </div>
             
-            <button class="button button-block"/>Log In</button>
+            <button id="login-button" class="button button-block">Log In</button>
+            <h1 class="or">or</h1>
+            <button id="login-guest" class="button button-block">Log In As Guest</button>
             
             </form>
     
             </div>
             
-        </div><!-- tab-content -->
+        </div>
             
-        </div> <!-- /form -->
+        </div>
     
-    <script src="form.js"></script>
+    <script src="./form.js"></script>
 </body>
 </html>

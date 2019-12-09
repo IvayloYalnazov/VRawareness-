@@ -1,3 +1,10 @@
+const testUser = {
+  firstName: 'Test',
+  lastName: 'User',
+  email: 'test.user@gamil.com',
+  password: '1234'
+}
+
 $('.form').find('input, textarea').on('keyup blur focus', function (e) {
   
     var $this = $(this),
@@ -39,5 +46,20 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
     $('.tab-content > div').not(target).hide();
     
     $(target).fadeIn(600);
-    
+  });
+
+  let loginButton = document.getElementById("login-button");
+  loginButton.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    let loginEmail = document.getElementById('login-email');
+    let loginPassword = document.getElementById('login-password');
+    if (loginEmail.value === testUser.email && loginPassword.value === testUser.password) {
+      window.location.href = 'main.html';
+    }
+  });
+  
+  let loginGuest = document.getElementById("login-guest");
+  loginGuest.addEventListener('click', (ev) => {
+    ev.preventDefault();
+      window.location.href = 'main.html';
   });
