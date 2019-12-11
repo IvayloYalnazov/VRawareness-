@@ -2,6 +2,12 @@ body,
 html {
   height: 100%;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #20024a;
+}
 
 * {
   box-sizing: border-box;
@@ -29,7 +35,7 @@ a {
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black;
   position: absolute;
-  top: 0;
+  top: 30%;
   left: 0;
   right: 0;
 }

@@ -1,42 +1,95 @@
-*{
-    margin:0;
-    padding:0;
-    text-decoration:none;
-   }
-   
-   body{
-    background:#f1f1f1;
-   }
-   
-   .s-m{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-   }
-   
-   .s-m a{
-    display:inline-flex;
-    width:40px;
-    height:40px;
-    background:#2c3e50;
-    color:white;
-    margin:0 6px;
-    border-radius:50%;
-    justify-content:center;
-    align-items:center;
-    transition:0.4s;
-    font-size:22px;
-   }
-   
-   .s-m a:hover{
-    background:#e67e22;
-   }
-   
-   .s-m a i{
-    transition:0.2s all;
-   }
-   
-   .s-m a:hover > i{
-    transform:scale(1.2) rotate(25deg);
-   }
+.s-m {
+  position: fixed;
+  right: -20%;
+  bottom: 7%;
+  z-index: 2;
+}
+
+.s-m.show-media-buttons {
+  -webkit-animation: show-media-buttons 1s ease forwards;
+  animation: show-media-buttons 1s ease forwards;
+}
+
+.s-m.hide-media-buttons {
+  -webkit-animation: hide-media-buttons 1s ease forwards;
+  animation: hide-media-buttons 1s ease forwards;
+}
+
+.s-m a {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  background: #2c3e50;
+  color: white;
+  margin: 10px 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 31px;
+}
+
+.s-m a:hover {
+  transform: scale(1.2);
+}
+
+.s-m a.facebook:hover {
+  background: #3b5998;
+}
+.s-m a.twitter:hover {
+  background: #00acee;
+}
+.s-m a.youtube:hover {
+  background: #c4302b;
+}
+.s-m a.instagram:hover {
+  background: #c13584;
+}
+.s-m a.maps:hover {
+  background: #6d9c48;
+}
+
+.s-m a i {
+  transition: 0.2s all;
+}
+
+.s-m a:hover > i {
+  transform: scale(1.2) rotate(25deg);
+}
+
+.show-social-button {
+  background-image: url("./arrow.png");
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 3%;
+  right: 3px;
+  transform: rotate(90deg) scaleX(1.7);
+  z-index: 2;
+  cursor: pointer;
+  transition: right 300ms ease;
+}
+
+.show-social-button:hover {
+  right: 6px;
+}
+
+@-webkit-keyframes show-media-buttons {
+  0% {
+    right: -20%;
+  }
+  100% {
+    right: 2%;
+  }
+}
+
+@-webkit-keyframes hide-media-buttons {
+  0% {
+    right: 2%;
+  }
+  100% {
+    right: -20%;
+  }
+}
