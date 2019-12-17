@@ -58,7 +58,7 @@
 }
 
 .show-social-button {
-  background-image: url("./arrow.png");
+  background-image: url('./arrow.png');
   width: 30px;
   height: 30px;
   position: fixed;
@@ -70,6 +70,11 @@
   z-index: 2;
   cursor: pointer;
   transition: right 300ms ease;
+  transition: transform 300ms;
+}
+
+.rotate-button {
+  transform: rotate(-90deg) scaleX(1.7);
 }
 
 .show-social-button:hover {

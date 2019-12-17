@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 .bg-image {
-  background-image: url("main-bg-img.jpg");
+  background-image: url('./main-bg-img.jpg');
   filter: blur(11px);
   -webkit-filter: blur(11px);
   position: fixed;
@@ -26,11 +26,108 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.list {
+  font-size: 1.5em;
+  padding: 0 0.7em 0.7em 0.7em;
+  text-align: left;
+}
+
+.list .list-item {
+  margin-top: 1.5rem;
+}
+
+@keyframes pros-animate {
+  0% {
+    color: white;
+  }
+  50% {
+    color: green;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes cons-animate {
+  0% {
+    color: white;
+  }
+  50% {
+    color: rgb(168, 0, 0);
+  }
+  100% {
+    color: white;
+  }
+}
+
+.card {
+  margin: 10px;
+  width: 318px;
+  height: 490px;
+  text-align: center;
+  border-radius: 3px;
+  transition: 200ms ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20em;
+  background: white;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-times-circle {
+  color: red;
+}
+
+.card-heading {
+  font-family: 'Raleway';
+  font-size: 2em;
+  color: #fff;
+  padding: 10px;
+  margin: 0 -2rem;
+  margin-top: 1em;
+  justify-content: center;
+  font-weight: 100;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  transition: border-radius 500ms ease;
+}
+
+.card.pros {
+  left: 10vw;
+}
+
+.card.cons {
+  right: 10vw;
+}
+
+.card.pros .card-heading .pros-animate {
+  animation: pros-animate 2s infinite linear;
+}
+
+.card.cons .card-heading .cons-animate {
+  animation: cons-animate 2s infinite linear;
+}
+
+.card:hover {
+  margin-top: 1em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.card:hover .card-heading {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+}
+
 .page-wrap {
   border-radius: 0.2em;
   margin: 4em 15vw;
   padding: 20px;
-  background: rgba(255,255,255,.9);
+  background: rgba(255, 255, 255, 0.9);
   -moz-box-shadow: 0 0 20px black;
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black;
@@ -50,11 +147,14 @@ nav .nav-item {
 nav .nav-item.log-in {
   right: 2em;
 }
+nav .nav-item.back-to-select {
+  left: 2em;
+}
 nav .nav-item.sign-up {
   right: 6em;
 }
 .vive {
-  background-image: url("Index_deluxe_kit.png");
+  background-image: url('Index_deluxe_kit.png');
   width: 21rem;
   height: 22rem;
   background-position: center;
@@ -74,8 +174,8 @@ nav .nav-item.sign-up {
   .page-wrap {
     margin: 4em 0.5em;
   }
-  nav .nav-item { 
-    top: .5em;
+  nav .nav-item {
+    top: 0.5em;
   }
 }
 
@@ -83,11 +183,25 @@ nav .nav-item.sign-up {
   .page-wrap {
     margin: 4em 20vw;
   }
+  .card.pros {
+    left: 15vw;
+  }
+  .card.cons {
+    right: 15vw;
+  }
 }
 
-/* @media (min-width:320px) 
-@media (min-width:481px) 
-@media (min-width:641px) 
-@media (min-width:961px) 
-@media (min-width:1025px)
-@media (min-width:1281px) */
+@media only screen and (max-width: 901px) {
+  .card {
+    width: 70vw;
+  }
+  .card.pros {
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .card.cons {
+    left: 50%;
+    transform: translate(-50%);
+    top: 53em;
+  }
+}

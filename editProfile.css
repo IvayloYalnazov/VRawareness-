@@ -1,86 +1,86 @@
 @import 'https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400';
 
-.container{
-	position:absolute;
-	width: auto;
-	height:auto;
-	top: calc(50% - 240px);
-	left: calc(50% - 156px);
+.container {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: calc(50% - 240px);
+  left: calc(50% - 156px);
 }
 
 form {
-	position: absolute;
-	text-align: center;
-	background: #fff;
-	width: 310px;
-	height: 470px;
-	border-radius: 5px;
-	padding: 30px 20px 0 20px;
-	box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
-	box-sizing: border-box;
+  position: absolute;
+  text-align: center;
+  background: #fff;
+  width: 310px;
+  height: 470px;
+  border-radius: 5px;
+  padding: 30px 20px 0 20px;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
 }
 
 h3 {
-	font-family: 'Dosis';
-	font-size: 35px;
-	text-transform: uppercase;
-	color: #87613d;
-	margin-bottom: 30px;
+  font-family: 'Dosis';
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #87613d;
+  margin-bottom: 30px;
 }
 
 input,
-button{
-	outline: none !important; 
+button {
+  outline: none !important;
 }
 
 button.form-btn {
-	position: absolute;
-	width: 50%;
-	height: 60px;
-	bottom: 0;
-	border: 0;
-	font-family: 'Dosis';
-	font-size: 24px;
-	text-transform: uppercase;
-    cursor: pointer;
-    text-shadow: 2px 1px 6px #000000;
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  bottom: 0;
+  border: 0;
+  font-family: 'Dosis';
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-shadow: 2px 1px 6px #000000;
 }
 
 button.form-btn.sx {
-	left: 0;
-	border-radius: 0 0 0 5px;
-	background-color: rgba(255, 125, 0, 0.35);
-	color: #fff;
-	transition:all 0.3s linear;
+  left: 0;
+  border-radius: 0 0 0 5px;
+  background-color: rgba(255, 125, 0, 0.35);
+  color: #fff;
+  transition: all 0.3s linear;
 }
 
 button.form-btn.sx:hover {
-	background-color:rgba(255, 125, 0, 0.65);
-	color: #fff;
+  background-color: rgba(255, 125, 0, 0.65);
+  color: #fff;
 }
 
 button.form-btn.dx {
-	right: 0;
-	border-radius: 0 0 5px 0;
-	background-color: #ff7d00;
-	color: #fff;
+  right: 0;
+  border-radius: 0 0 5px 0;
+  background-color: #ff7d00;
+  color: #fff;
 }
 
 input {
-	border: none;
-	border-bottom: 1px solid #ffc185;
-	width: 85%;
-	font-family: 'Roboto';
-	color: #ff7d00;
-	text-align: center;
-	font-size: 21px;
-	font-weight:100;
-    margin-bottom:25px;
-    margin-top: 1em;
+  border: none;
+  border-bottom: 1px solid #ffc185;
+  width: 85%;
+  font-family: 'Roboto';
+  color: #ff7d00;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 100;
+  margin-bottom: 25px;
+  margin-top: 1em;
 }
 
 ::-webkit-input-placeholder {
-    color: #ffc185;
-	font-family: 'Roboto';
-	font-weight:100;
+  color: #ffc185;
+  font-family: 'Roboto';
+  font-weight: 100;
 }
